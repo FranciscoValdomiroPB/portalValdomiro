@@ -16,38 +16,38 @@ header {
 	padding: 20px;
 	background-color: #fff;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .imagem_logo img {
+}
+
+.imagem_logo img {
 	max-width: 100%;
-  }
-  
-  nav ul {
+}
+
+nav ul {
 	display: flex;
 	list-style: none;
 	margin: 0;
 	padding: 0;
-  }
-  
-  nav ul li {
+}
+
+nav ul li {
 	margin-right: 20px;
-  }
-  
-  nav ul li:last-child {
+}
+
+nav ul li:last-child {
 	margin-right: 0;
-  }
-  
-  nav ul li a {
+}
+
+nav ul li a {
 	text-decoration: none;
 	color: #333;
 	font-weight: bold;
-  }
-  
-  h1 {
+}
+
+h1 {
 	font-size: 32px;
 	margin: 0;
-  }
-  
+}
+
 
 /* ESTILOS DO MAIN */
 main {

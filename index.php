@@ -8,7 +8,7 @@
 	<title>Gruta</title>
 
 	<!-- ARQUIVO DE ESTILO DO PORTAL -->
-	<link rel="stylesheet" type="text/css" href="css\restaurante.css">
+	<link rel="stylesheet" type="text/css" href="css/restaurante.css">
 
 </head>
 
