@@ -10,44 +10,44 @@
 
 /* ESTILOS DO HEADER */
 header {
-	background-color: #005A8A;
-	color: #FFFFFF;
 	display: flex;
-	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
 	padding: 20px;
-}
-
-nav ul {
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .imagem_logo img {
+	max-width: 100%;
+  }
+  
+  nav ul {
 	display: flex;
 	list-style: none;
-	margin-bottom: 20px;
-}
-
-nav li {
+	margin: 0;
+	padding: 0;
+  }
+  
+  nav ul li {
 	margin-right: 20px;
-}
-
-nav a {
-	color: #FFFFFF;
+  }
+  
+  nav ul li:last-child {
+	margin-right: 0;
+  }
+  
+  nav ul li a {
 	text-decoration: none;
+	color: #333;
 	font-weight: bold;
-	
-}
-
-nav a:hover {
-	color: #F5A623;
-	border: outset;
-	border-style: solid;
-	border-width: 5px;
-	border-color: #800000;
-}
-
-h1 {
-	font-size: 48px;
-	margin-bottom: 20px;
-	text-align: center;
-}
+  }
+  
+  h1 {
+	font-size: 32px;
+	margin: 0;
+  }
+  
 
 /* ESTILOS DO MAIN */
 main {

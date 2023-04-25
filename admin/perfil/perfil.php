@@ -34,7 +34,7 @@
 			<div class="left box-primary">
 				<img class="image" src="img\perfil_sem_foto.png" alt="" />
 				<h3 class="username text-center">Francisco Valdomiro P. B.</h3>
-				<a href="#" class="btn btn-primary btn-block"><b>Editar foto</b></a>
+				<a href="img\perfil_sem_foto.png" class="btn btn-primary btn-block"><b>Editar foto</b></a>
 			</div>
 			<div class="right tab-content">
 				<form class="form-horizontal">
