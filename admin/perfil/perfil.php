@@ -23,7 +23,7 @@
 				<li><a href="http://localhost//portalValdomiro/">Início</a></li>
 				<li><a href="http://localhost//portalValdomiro/admin/perfil/perfil.php">Perfil</a></li>
 				<li><a href="http://localhost//portalValdomiro/admin/pousadas/pousadas.php">Pousadas</a></li>
-				<li><a href="http://localhost//portalValdomiro/admin/delivery/deliverys">Deliverys </a></li>
+				<li><a href="http://localhost//portalValdomiro\admin\deliverys\deliverys.php">Deliverys </a></li>
 			</ul>
 		</nav>
 		<h1>Presidente Figueiredo</h1>
