@@ -1,0 +1,114 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #005A8A;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.imagem_logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav li a:hover {
+    border: outset;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #F5A623;
+    background-color: #F5A623;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+/* ESTILOS DO MAIN */
+
+/* Estilos para o formulário de reserva de pousadas */
+
+/* Define a fonte e o tamanho do texto para todo o documento */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Define o tamanho máximo da largura do formulário */
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Define o estilo para as tags de rótulo do formulário */
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Define o estilo para os campos de entrada do formulário */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="number"],
+  select,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid #005A8A;
+  }
+  
+  /* Define o estilo para o botão de envio do formulário */
+  input[type="submit"],
+  input[type="reset"] {
+    background-color: #005A8A;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover,
+  input[type="reset"]:hover {
+    background-color: #F5A623;
+    border-color: #F5A623;
+  }
+  
+  /* Define o estilo para as mensagens de erro do formulário */
+  input:invalid,
+  select:invalid,
+  textarea:invalid {
+    border: 1px solid #005A8A;
+  }
+  
+  input:valid,
+  select:valid,
+  textarea:valid {
+    border: 1px solid #005A8A;
+  }
+  

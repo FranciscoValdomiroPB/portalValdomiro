@@ -42,7 +42,7 @@
 						<label for="inputName" class="col-sm-2 control-label">Nome:</label>
 
 						<div class="col-sm-10">
-							<input type="email" class="form-control" id="inputName"
+							<input type="text" class="form-control" id="inputName"
 								placeholder="exemplo: Fulano de Tal">
 						</div>
 					</div>
