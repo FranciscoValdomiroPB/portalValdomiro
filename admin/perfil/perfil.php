@@ -8,7 +8,7 @@
 	<title>Gruta</title>
 
 	<!-- ARQUIVO DE ESTILO DO PORTAL -->
-	<link rel="stylesheet" type="text/css" href="css/estiloPerfil.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost//portalValdomiro/css/estiloPerfil.css">
 
 </head>
 
@@ -16,7 +16,7 @@
 	<!--CABEÇALHO DA PAGINA INICIAL-->
 	<header>
 		<div class="imagem_logo">
-			<div><img src="img\logo.png"></div>
+			<div><img src="../../img/logo.png"></div>
 		</div>
 		<nav>
 			<ul>
@@ -32,9 +32,9 @@
 	<main>
 		<div class="container">
 			<div class="left box-primary">
-				<img class="image" src="img\perfil_sem_foto.png" alt="" />
+				<img class="image" src="../../img/perfil_sem_foto.png" alt="" />
 				<h3 class="username text-center">Francisco Valdomiro P. B.</h3>
-				<a href="img\perfil_sem_foto.png" class="btn btn-primary btn-block"><b>Editar foto</b></a>
+				<a href="../../img/perfil_sem_foto.png" class="btn btn-primary btn-block"><b>Editar foto</b></a>
 			</div>
 			<div class="right tab-content">
 				<form class="form-horizontal">
