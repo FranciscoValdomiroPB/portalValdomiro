@@ -8,7 +8,7 @@
     <title>Gruta</title>
 
     <!-- ARQUIVO DE ESTILO DO PORTAL -->
-    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost//portalValdomiro/css/estilo.css">
 
 </head>
 
@@ -16,14 +16,14 @@
     <!--CABEÇALHO DA PAGINA INICIAL-->
     <header>
         <div class="imagem_logo">
-            <div><img src="img\logo.png"></div>
+            <div><img src="http://localhost//portalValdomiro/img/logo.png"></div>
         </div>
         <nav>
             <ul>
                 <li><a href="http://localhost//portalValdomiro/">Início</a></li>
                 <li><a href="http://localhost//portalValdomiro/admin/perfil/perfil.php">Perfil</a></li>
                 <li><a href="http://localhost//portalValdomiro/admin/pousadas/pousadas.php">Pousadas</a></li>
-                <li><a href="http://localhost//portalValdomiro/admin/delivery/deliverys">Deliverys </a></li>
+                <li><a href="http://localhost//portalValdomiro\admin\deliverys\deliverys.php">Deliverys </a></li>
             </ul>
         </nav>
         <h1>Presidente Figueiredo</h1>

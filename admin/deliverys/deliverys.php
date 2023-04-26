@@ -8,7 +8,7 @@
     <title>Gruta</title>
 
     <!-- ARQUIVO DE ESTILO DO PORTAL -->
-    <link rel="stylesheet" type="text/css" href="css/restaurante.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost//portalValdomiro/css/restaurante.css">
 
 </head>
 
@@ -16,7 +16,7 @@
     <!--CABEÇALHO DA PAGINA INICIAL-->
     <header>
         <div class="imagem_logo">
-            <div><img src="img\logo.png"></div>
+            <div><img src="http://localhost//portalValdomiro/img/logo.png"></div>
         </div>
         <nav>
             <ul>
@@ -34,28 +34,31 @@
             <h2>Nossos Restaurantes</h2>
             <div class="reyaurantes">
                 <div class="restaurante">
-                    <div class="imgRestaurantes"><img src="img/pousada1.jpg"></div>
-                    <h3>Pousada Tucanos</h3>
-                    <p>Localizada bem no centro de Presidente Figueiredo-AM, a Pousada Tucanos oferece conforto e
-                        tranquilidade
-                        para os seus hóspedes. São diversos quartos com ar-condicionado, TV, Wi-fi e
-                        frigobar. Além disso, a pousada conta com um bar e um delicioso café da manhã.</p>
+                    <div class="imgRestaurantes"><img src="https://lh5.googleusercontent.com/p/AF1QipO2jDlPIaR7yBzefs9mbiuQ6Zslf_vcIsukft6V=w408-h291-k-no"></div>
+                    <h3>Restaurante Papaleguas</h3>
+                    <ul>
+                        <li><a href="https://wa.me/9299268-9498">Whatsapp</a></li>
+                        <li><a href="https://goo.gl/maps/9GyK5uSzKMZziEKk7">localização</a></li>
+                    </ul>
+                    <p></p>
                 </div>
                 <div class="restaurante">
-                    <div class="imgPousadas"><img src="img/pousada2.jpg"></div>
-                    <h3>Local Hostel</h3>
-                    <p>O hostel é uma delícia, o atendimento e café da manhã bem completo, a Local Hostel é o lugar
-                        perfeito para quem
-                        busca descanso e diversão. São diversos quartos, equipados com
-                        ar-condicionado, TV e frigobar. A pousada conta com um Ambiente com tema comunidade.</p>
+                    <div class="imgRestaurantes"><img src="https://lh5.googleusercontent.com/p/AF1QipOadJTyhgEoygT29P48CWHP8MFwijIZKZX1b_Re=w203-h152-k-no"></div>
+                    <h3>Chapa Quente</h3>
+                    <ul>
+                        <li><a href="https://wa.me/9299117-6669">Whatsapp</a></li>
+                        <li><a href="https://goo.gl/maps/mrv3tTMhhRKfu6aM9">localização</a></li>
+                    </ul>
+                    <p></p>
                 </div>
                 <div class="restaurante">
-                    <div class="imgPousadas"><img src="img/pousada3.jpg"></div>
-                    <h3>Pousada 1 lugar</h3>
-                    <p>Ambiente bem instagramaveis, a Pousada 1 lugar oferece um clima agradável e uma vista
-                        deslumbrante. São diversos chalés equipados com ar-condicionado, TV e frigobar. Além disso, a
-                        pousada
-                        conta com Wi-fi, refeições agradáveis como café, almoço e janta deliciosos.</p>
+                    <div class="imgRestaurantes"><img src="https://lh5.googleusercontent.com/p/AF1QipOVh1wYHWOBAM_S2_E-4wVUHyL5Bsx_5pSgD-sx=w408-h306-k-no"></div>
+                    <h3>Bar E Restaurante Xodó Da Cidade</h3>
+                    <ul>
+                        <li><a href="https://wa.me/09233240805">Whatsapp</a></li>
+                        <li><a href="https://goo.gl/maps/yjRXb5suzL5U6oZZA">localização</a></li>
+                    </ul>
+                    <p></p>
                 </div>
             </div>
         </section>

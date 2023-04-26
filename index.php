@@ -8,7 +8,7 @@
 	<title>Gruta</title>
 
 	<!-- ARQUIVO DE ESTILO DO PORTAL -->
-	<link rel="stylesheet" type="text/css" href="css/restaurante.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost//portalValdomiro/css/estilo.css">
 
 </head>
 
@@ -16,7 +16,7 @@
 	<!--CABEÇALHO DA PAGINA INICIAL-->
 	<header>
 		<div class="imagem_logo">
-			<div><img src="img\logo.png"></div>
+			<div><img src="http://localhost//portalValdomiro/img/logo.png"></div>
 		</div>
 		<nav>
 			<ul>
