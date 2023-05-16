@@ -12,10 +12,10 @@ date_default_timezone_set("America/Manaus");
 
 $host_ip = $_SERVER['HTTP_HOST'];
 
-$url = "http://" . $host_ip . "/pousadas";
+$url = "http://" . $host_ip . "/portalValdomiro";
 
-$url_admin = "http://" . $host_ip . "/po/admin";
+$url_admin = "http://" . $host_ip . "/portalValdomiro/admin";
 
-$url_cliente = "http://" . $host_ip . "/portal/cliente";
+$url_cliente = "http://" . $host_ip . "/portalValdomiro/cliente";
 
 ?>
