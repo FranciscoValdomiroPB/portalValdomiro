@@ -44,5 +44,9 @@ if (!isset($_SESSION['nome_login'])) {
 				<li><a href="<?php echo $_SESSION['url'] . "/sair.php"; ?>">Sair</a></li>
 			</ul>
 		</nav>
-		<h1>Presidente Figueiredo</h1>
+		<label>
+			<?php echo "Seja bem-vindo(a), " . $_SESSION['nome_completo_login']. " a"; ?>
+			<h1>Presidente Figueiredo</h1>
+		</label>
+		
 	</header>

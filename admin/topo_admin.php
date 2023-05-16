@@ -92,9 +92,13 @@ if ($_SESSION['tipo_login'] <> 0) {
 					</li>
 
 					<li><a href="<?php echo $_SESSION['url'] . "/sair.php"; ?>">SAIR</a></li>
-
+					<li><a href="http://localhost//portalValdomiro/">Início</a></li>
+					<li><a href="http://localhost//portalValdomiro/admin/perfil/perfil.php">Perfil</a></li>
+					<li><a href="http://localhost//portalValdomiro/admin/pousadas/pousadas.php">Pousadas</a></li>
+					<li><a href="http://localhost//portalValdomiro\admin\deliverys\deliverys.php">Deliverys </a></li>
+					<li><a href="<?php echo $_SESSION['url'] . "/sair.php"; ?>">Sair</a></li>
 				</ul>
-
+				
 			</nav>
 
 		</div>

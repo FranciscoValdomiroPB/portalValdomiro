@@ -50,6 +50,10 @@ nav li a:hover {
 	background-color: #F5A623;
 	border-radius: 10px;
 }
+label{
+	color: #F5A623;
+	align-items: center;
+}
 
 h1 {
     font-size: 30px;
