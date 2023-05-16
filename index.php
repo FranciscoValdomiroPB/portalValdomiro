@@ -6,7 +6,7 @@
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portal</title>
+	<title>Gruta</title>
 
 	<!-- ARQUIVO DE ESTILOS DO PORTAL -->
 	<link rel="stylesheet" type="text/css" href="http://localhost/portalValdomiro\css\estilologin.css">

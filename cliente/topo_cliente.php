@@ -1,36 +1,34 @@
 <?php session_start();
 
-	if (!isset($_SESSION['nome_login'])) {	
-	    
-	    session_destroy();
-	 
-	    unset ($_SESSION['nome_login']);
-	    unset ($_SESSION['tipo_login']);
+if (!isset($_SESSION['nome_login'])) {
 
-		echo "<script> alert ('ERRO: É NECESSÁRIO FAZER LOGIN');</script>";
-		
-		echo "<script> window.location.href='http://localhost/portal';</script>";
+	session_destroy();
 
-	}	
+	unset($_SESSION['nome_login']);
+	unset($_SESSION['tipo_login']);
 
-	if ($_SESSION['tipo_login'] <> 0) {
+	echo "<script> alert ('ERRO: É NECESSÁRIO FAZER LOGIN');</script>";
 
-		echo "<script> alert('ERRO: VOCÊ NÃO TEM PERMISSÃO PARA ACESSAR ESTA PÁGINA!');</script>";					
-		session_destroy();
-	 
-		unset ($_SESSION['nome_completo_login']);
-		unset ($_SESSION['nome_login']);
-		unset ($_SESSION['tipo_login']);
+	echo "<script> window.location.href='http://localhost/portalValdomiro';</script>";
 
-		unset ($_SESSION['url']);
-		unset ($_SESSION['url_admin']);
-		unset ($_SESSION['url_cliente']);
+}
 
-		echo "<script> window.location.href='http://localhost/portal';</script>";				
+if ($_SESSION['tipo_login'] <> 0) {
 
-	} 
+	echo "<script> alert('ERRO: VOCÊ NÃO TEM PERMISSÃO PARA ACESSAR ESTA PÁGINA!');</script>";
+	session_destroy();
 
+	unset($_SESSION['nome_completo_login']);
+	unset($_SESSION['nome_login']);
+	unset($_SESSION['tipo_login']);
 
+	unset($_SESSION['url']);
+	unset($_SESSION['url_admin']);
+	unset($_SESSION['url_cliente']);
+
+	echo "<script> window.location.href='http://localhost/portalValdomiro';</script>";
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -41,60 +39,27 @@
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portal</title>
+	<title>Gruta</title>
 
-	<!-- ARQUIVO DE ESTILOS DO PORTAL -->
-	<link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['url']."/css/estilo.css";?>">
+	<!-- ARQUIVO DE ESTILO DO PORTAL -->
+	<link rel="stylesheet" type="text/css" href="http://localhost//portalValdomiro/css/estilo.css">
 
-	<script>
-
-		function confirmar_exclusao(codigo_curso) {
-		     
-		     var resposta = confirm("Deseja continuar com a exclusão?");
-		     
-		     if (resposta == true) {
-		     
-		          window.location.href = "excluir.php?codigo_curso="+codigo_curso;
-		     }
-		}
-</script>
-	
 </head>
 
-
 <body>
-
-		<div class="barra_topo">
-
-				<div class="barra_topo_n1">
-						
-						<img src="<?php echo $_SESSION['url']."/img/logo.png";?>">
-
-						<label><?php echo "Seja bem-vindo, ". $_SESSION['nome_completo_login'];?></label>
-
-				</div>
-
-			<div class="barra_topo_n2">
-			
-				<nav>
-
-					<ul class="menu_admin">
-
-						<li><a href="#">CURSO</a>
-
-							<ul>
-				                  <li><a href="<?php echo $_SESSION['url_admin']."/curso";?>">Cadastrar</a></li>
-				                  <li><a href="<?php echo $_SESSION['url_admin']."/curso/exibir.php";?>">Exibir</a></li>
-				       		</ul>
-
-						</li>
-						
-						<li><a href="<?php echo $_SESSION['url']."/sair.php";?>">SAIR</a></li>
-
-					</ul>
-
-				</nav>
-
-			</div>
-
+	<!--CABEÇALHO DA PAGINA INICIAL-->
+	<header>
+		<div class="imagem_logo">
+			<div><img src="http://localhost//portalValdomiro/img/logo.png"></div>
 		</div>
+		<nav>
+			<ul>
+				<li><a href="http://localhost//portalValdomiro/">Início</a></li>
+				<li><a href="http://localhost//portalValdomiro/admin/perfil/perfil.php">Perfil</a></li>
+				<li><a href="http://localhost//portalValdomiro/admin/pousadas/pousadas.php">Pousadas</a></li>
+				<li><a href="http://localhost//portalValdomiro\admin\deliverys\deliverys.php">Deliverys </a></li>
+				<li><a href="<?php echo $_SESSION['url'] . "/sair.php"; ?>">Sair</a></li>
+			</ul>
+		</nav>
+		<h1>Presidente Figueiredo</h1>
+	</header>

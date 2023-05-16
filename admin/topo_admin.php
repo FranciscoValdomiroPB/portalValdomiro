@@ -41,7 +41,7 @@ if ($_SESSION['tipo_login'] <> 0) {
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portal</title>
+	<title>GRUTA</title>
 
 	<!-- ARQUIVO DE ESTILOS DO PORTAL -->
 	<link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['url'] . "/css/estilo.css"; ?>">
@@ -82,11 +82,11 @@ if ($_SESSION['tipo_login'] <> 0) {
 
 				<ul class="menu_admin">
 
-					<li><a href="#">CURSO</a>
+					<li><a href="#">PERFIL</a>
 
 						<ul>
-							<li><a href="<?php echo $_SESSION['url_admin'] . "/curso"; ?>">Cadastrar</a></li>
-							<li><a href="<?php echo $_SESSION['url_admin'] . "/curso/exibir.php"; ?>">Exibir</a></li>
+							<li><a href="<?php echo $_SESSION['url_admin'] . "/perfil"; ?>">Cadastrar</a></li>
+							<li><a href="<?php echo $_SESSION['url_admin'] . "/perfil/exibir.php"; ?>">Exibir</a></li>
 						</ul>
 
 					</li>

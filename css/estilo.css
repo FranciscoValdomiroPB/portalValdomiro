@@ -125,3 +125,96 @@ footer {
 	font-size: 14px;
 	margin-top: 50px;
 }
+.barra_topo{
+
+	display: flex;
+	flex-direction: column;
+
+
+}
+
+.barra_topo_n1{
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;	
+	align-items: center;
+	padding: 1rem;
+
+}
+
+.barra_topo_n1 > img{
+	
+	width: 100px;
+
+}
+
+
+.barra_topo_n2{
+
+	padding: 0.5rem;
+	background: #00008B;
+
+}
+
+.menu_admin{
+
+	list-style:none;
+	float:left;
+	width: 100%;
+
+}
+
+.menu_admin li{
+
+	position: relative;
+	float:left;
+	border-right: 1px solid #FFF;
+	font-size: 1.2rem;
+	width: 10%;
+	text-align: center;
+
+
+}
+
+.menu_admin li a{
+
+	color:#FFF; 
+	text-decoration:none; 
+	padding: 1rem 1rem; 
+	display:block;
+
+}
+
+.menu_admin li a:hover{
+
+	background: #00BFFF;
+	color: #FFF;
+	font-weight: 600;
+
+}
+
+
+.menu_admin li  ul{
+	
+	position:absolute;
+	top:35px;
+	left:0;
+	background: #00008B;
+	display:none;
+	
+}
+
+.menu_admin li:hover ul, .menu li.over ul{
+	
+	display:block;
+
+}
+
+.menu_admin li ul li{
+	
+	border-bottom:1px solid #FFF;
+	display:block;
+	width: 200px;
+	text-align: left;
+}
