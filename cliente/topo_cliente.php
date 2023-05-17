@@ -24,8 +24,6 @@ if (!isset($_SESSION['nome_login'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Gruta</title>
 
-	<!-- ARQUIVO DE ESTILO DO PORTAL -->
-	<link rel="stylesheet" type="text/css" href="http://localhost//portalValdomiro/css/estilo.css">
 
 </head>
 
@@ -37,16 +35,17 @@ if (!isset($_SESSION['nome_login'])) {
 		</div>
 		<nav>
 			<ul>
-				<li><a href="http://localhost//portalValdomiro/">Início</a></li>
-				<li><a href="http://localhost//portalValdomiro/admin/perfil/perfil.php">Perfil</a></li>
-				<li><a href="http://localhost//portalValdomiro/admin/pousadas/pousadas.php">Pousadas</a></li>
-				<li><a href="http://localhost//portalValdomiro\admin\deliverys\deliverys.php">Deliverys </a></li>
+				<li><a href="<?php echo $_SESSION['url_cliente']; ?>">Início</a></li>
+				<li><a href="<?php echo $_SESSION['url_cliente'] . "/perfil/perfil.php"; ?>">Perfil</a></li>
+				<li><a href="<?php echo $_SESSION['url_cliente'] . "/pousadas/pousadas.php"; ?>">Pousadas</a></li>
+				<li><a href="<?php echo $_SESSION['url_cliente'] . "/deliverys/deliverys.php"; ?>">Deliverys </a></li>
 				<li><a href="<?php echo $_SESSION['url'] . "/sair.php"; ?>">Sair</a></li>
 			</ul>
 		</nav>
 		<label>
-			<?php echo "Seja bem-vindo(a), " . $_SESSION['nome_completo_login']. " a"; ?>
+			<?php echo "Seja bem-vindo(a), " . $_SESSION['nome_completo_login'] . " a"; ?>
 			<h1>Presidente Figueiredo</h1>
 		</label>
-		
+
 	</header>
+</body>

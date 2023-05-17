@@ -5,7 +5,7 @@
 
 	$codigo_curso = $_GET['codigo_curso'];
 
-	$delete_curso = "DELETE FROM cliente WHERE codigo_curso = $codigo_curso";
+	$delete_curso = "DELETE FROM curso WHERE codigo_curso = $codigo_curso";
 	
 	
 		if (mysqli_query($conexao,$delete_curso)) {
