@@ -5,7 +5,7 @@
 <!--CONTEÚDO DA PÁGINA DELIVERY---->
 <main>
     <section>
-        <h2>Nossos Restaurantes</h2>
+        <h2>Nossos Restaurantes</h2> 
         <div class="reyaurantes">
             <div class="restaurante">
                 <div class="imgRestaurantes"><img

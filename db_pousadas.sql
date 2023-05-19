@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16/05/2023 às 23:26
+-- Tempo de geração: 19/05/2023 às 02:43
 -- Versão do servidor: 10.4.28-MariaDB
--- Versão do PHP: 8.2.4
+-- Versão do PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,14 +33,6 @@ CREATE TABLE `administrador` (
   `sobrenome` varchar(50) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Despejando dados para a tabela `administrador`
---
-
-INSERT INTO `administrador` (`id_administrador`, `nome`, `sobrenome`, `email`) VALUES
-(1, 'francisco', NULL, NULL),
-(2, 'francisco', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -89,7 +81,8 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`codigo_login`, `nome_completo_login`, `nome_login`, `senha_login`, `tipo_login`) VALUES
-(1, 'francisco', 'francisco', '202cb962ac59075b964b07152d234b70', '0');
+(1, 'FRANCISCO VALDOMIRO PINTO BEZERRA', 'francisco', '202cb962ac59075b964b07152d234b70', '1'),
+(5, 'lucivan', 'lucivan', '202cb962ac59075b964b07152d234b70', '0');
 
 -- --------------------------------------------------------
 
@@ -107,8 +100,18 @@ CREATE TABLE `pousada` (
   `estado` varchar(100) DEFAULT NULL,
   `pais` varchar(100) DEFAULT NULL,
   `numero_quartos` int(11) DEFAULT NULL,
-  `preco_noite` decimal(10,2) DEFAULT NULL
+  `preco_noite` decimal(10,2) DEFAULT NULL,
+  `fotos` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `pousada`
+--
+
+INSERT INTO `pousada` (`id_pousada`, `id_administrador`, `nome`, `descricao`, `endereco`, `cidade`, `estado`, `pais`, `numero_quartos`, `preco_noite`, `fotos`) VALUES
+(1, NULL, 'POUSADA TUCANO', 'Localizada bem no centro de Presidente Figueiredo-AM, a Pousada Tucanos oferece conforto e\n					tranquilidade\n					para os seus hóspedes. São diversos quartos com ar-condicionado, TV, Wi-fi e\n					fri', ' Av. Maçaranduba, 606-704 - Honório Roldão', 'PRESIDENTE FIGUEIREDO', 'AMAZONAS', 'BRASIL', 1, 100.00, 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/89/2e/2f/pousada-tucano.jpg?w=400&amp;h=-1&amp;s=1 1x,https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/89/2e/2f/pousada-tucano.jpg?'),
+(2, NULL, 'Local Hostel', 'O hostel é uma delícia, o atendimento e café da manhã bem completo, a Local Hostel é o lugar perfeito para quem busca descanso e diversão. São diversos quartos, equipados com ar-condicionado, TV e fri', 'Av. Pe Calleri, 60 - Tancredo Neves', 'Presidente Figueiredo', 'Amazonas', 'Brasil', NULL, NULL, 'https://media-cdn.tripadvisor.com/media/photo-s/14/ec/fb/e2/local-hostel-figueiredo.jpg'),
+(3, NULL, 'Pousada 1 lugar', 'Ambiente bem instagramaveis, a Pousada 1 lugar oferece um clima agradável e uma vista deslumbrante. São diversos chalés equipados com ar-condicionado, TV e frigobar. Além disso, a pousada conta com Wi', 'BR 174 - KM 1004', 'PRESIDENTE FIGUEIREDO', 'AMAZONAS', 'BRASIL', NULL, NULL, 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/1f/ce/26/hotel-1-lugar.jpg?w=1200&amp;h=-1&amp;s=1 1x,https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/1f/ce/26/hotel-1-lugar.jpg?w');
 
 -- --------------------------------------------------------
 
@@ -226,7 +229,7 @@ ALTER TABLE `usuário`
 -- AUTO_INCREMENT de tabela `administrador`
 --
 ALTER TABLE `administrador`
-  MODIFY `id_administrador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_administrador` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `avaliação_da_pousada`
@@ -244,13 +247,13 @@ ALTER TABLE `avaliação_do_restaurante`
 -- AUTO_INCREMENT de tabela `login`
 --
 ALTER TABLE `login`
-  MODIFY `codigo_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `codigo_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `pousada`
 --
 ALTER TABLE `pousada`
-  MODIFY `id_pousada` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pousada` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `reserva`

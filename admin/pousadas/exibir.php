@@ -3,18 +3,18 @@
 	require('../../conexao.php');
 
 
-	$select_curso = mysqli_query($conexao, "SELECT * FROM curso ORDER BY codigo_curso ASC");
+	$select_pousada = mysqli_query($conexao, "SELECT * FROM pousada ORDER BY id_pousada ASC");
 				
 	
 		if (mysqli_num_rows($select_curso) > 0) {
 			
-			$dados_curso = mysqli_fetch_assoc($select_curso);
+			$dados_pousada = mysqli_fetch_assoc($select_pousada);
 			
 		} else {
 			
-			echo "<script> alert ('NÃO EXISTEM CURSOS CADASTRADOS!');</script>";
+			echo "<script> alert ('NÃO EXISTEM POUSADAS CADASTRADOS!');</script>";
 				
-			echo "<script> window.location.href='$url_admin/curso';</script>";
+			echo "<script> window.location.href='$url_admin/pousadas';</script>";
 			
 			
 		}
@@ -26,7 +26,7 @@
 
 		<div class="estila_tabela">
 
-			<div><h1>CURSOS CADASTRADOS</h1></div>
+			<div><h1>POUSADAS CADASTRADOS</h1></div>
 
 				<table>
 					
@@ -47,11 +47,11 @@
 					
 					<tr>
 
-						<td><?php echo $dados_curso['codigo_curso'];?></td>
-						<td><?php echo $dados_curso['nome_curso'];?></td>
+						<td><?php echo $dados_curso['id_pousada'];?></td>
+						<td><?php echo $dados_curso['nome'];?></td>
 						<td>
 
-							<a href="editar.php?codigo_curso=<?php echo $dados_curso['codigo_curso'];?>">
+							<a href="editar.php?codigo_curso=<?php echo $dados_curso['id_pousada'];?>">
 								<img src="../../img/editar.png" class="botao_acao" title="Editar">
 							</a>
 						</td>

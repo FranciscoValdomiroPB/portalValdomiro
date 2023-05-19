@@ -1,4 +1,4 @@
-<?php require('../topo_admin.php');
+<?php require('../topo_cliente.php');
 
 	require('../../conexao.php');
 

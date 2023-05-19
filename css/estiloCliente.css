@@ -1,0 +1,163 @@
+/* ARQUIVO DE ESTILO DO PORTAL */
+
+/* Estilo geral */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* ESTILOS DO HEADER */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #005A8A;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.imagem_logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.menu {
+    list-style: none;
+    float: left;
+}
+
+.menu li {
+    position: relative;
+    float: left;
+}
+
+.menu li a {
+    padding: 5px 10px;
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu li a:hover {
+    background: #F5A623;
+    color: #fff;
+    -moz-box-shadow: 0 3px 10px 0 #CCC;
+    -webkit-box-shadow: 0 3px 10px 0 #ccc;
+    text-shadow: 0px 0px 5px #fff;
+
+    border: outset;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #F5A623;
+    background-color: #F5A623;
+    border-radius: 10px;
+}
+
+.menu li ul {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: blue;
+    display: none;
+    border-radius: 10px;
+}
+
+.menu li:hover ul,
+.menu li.over ul {
+    display: block;
+}
+
+.menu li ul li {
+    display: block;
+    width: 150px;
+
+}
+
+label {
+    color: #F5A623;
+    align-items: center;
+}
+
+h1 {
+    font-size: 30px;
+    color: #FFFFFF;
+    margin-top: 0;
+}
+
+
+/* ESTILOS DO MAIN */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para as seções */
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: blue;
+    font-style: Arial;
+}
+
+.pousadas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pousada {
+    width: 300px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+.pousada img {
+    max-width: 400px;
+    max-height:300px;
+    object-fit: cover;
+}
+
+h3 {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: blue;
+}
+
+p {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 50px;
+}
