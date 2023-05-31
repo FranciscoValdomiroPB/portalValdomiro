@@ -40,9 +40,7 @@ if (!isset($_SESSION['nome_login'])) {
 				<li><a href="#">Perfil</a>
 
 					<ul>
-						<li><a href="<?php echo $_SESSION['url_cliente'] . "/perfil/perfil.php"; ?>">Cadastrar</a></li>
 						<li><a href="<?php echo $_SESSION['url_cliente'] . "/perfil/editar.php"; ?>">Editar</a></li>
-						<li><a href="<?php echo $_SESSION['url_cliente'] . "/perfil/excluir.php"; ?>">Excluir</a></li>
 						<li><a href="<?php echo $_SESSION['url_cliente'] . "/perfil/exibir.php"; ?>">Exibir</a></li>
 					</ul>
 

@@ -2,7 +2,7 @@
 
 require('../../conexao.php');
 
-$id_pousada = $_POST['id_pousada'];
+$id_pousada = $_GET['codigo_curso'];
 
 $select_pousada = mysqli_query($conexao, "SELECT * FROM `pousada` WHERE id_pousada = $id_pousada");
 
@@ -16,8 +16,6 @@ if (mysqli_num_rows($select_pousada) > 0) {
 	echo "<script> alert ('NÃO EXISTEM CURSOS CADASTRADOS!');</script>";
 
 	echo "<script> window.location.href='$url_admin/pousadas';</script>";
-
-
 }
 
 

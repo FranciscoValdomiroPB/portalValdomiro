@@ -1,75 +1,78 @@
 <?php require('../topo_admin.php');
 
-	require('../../conexao.php');
+require('../../conexao.php');
 
 
-	$select_pousada = mysqli_query($conexao, "SELECT * FROM pousada ORDER BY id_pousada ASC");
-				
-	
-		if (mysqli_num_rows($select_pousada) > 0) {
-			
-			$dados_pousada = mysqli_fetch_assoc($select_pousada);
-			
-		} else {
-			
-			echo "<script> alert ('NÃO EXISTEM POUSADAS CADASTRADOS!');</script>";
-				
-			echo "<script> window.location.href='$url_admin/pousadas';</script>";
-			
-			
-		}
+$select_pousada = mysqli_query($conexao, "SELECT * FROM pousada ORDER BY id_pousada ASC");
+
+
+if (mysqli_num_rows($select_pousada) > 0) {
+
+	$dados_pousada = mysqli_fetch_assoc($select_pousada);
+
+} else {
+
+	echo "<script> alert ('NÃO EXISTEM POUSADAS CADASTRADOS!');</script>";
+
+	echo "<script> window.location.href='$url_admin/pousadas';</script>";
+
+
+}
 
 
 ?>
 
 
 
-		<div class="estila_tabela">
+<div class="estila_tabela">
 
-			<div><h1>POUSADAS CADASTRADOS</h1></div>
+	<h1>POUSADAS CADASTRADOS</h1>
+	<table>
 
-				<table>
-					
-					<tr class="tabela_cabecalho">
+		<tr class="tabela_cabecalho">
 
-						<td>CÓDIGO</td>
-						<td>NOME</td>
-						<td colspan="2">Ação</td>
+			<td>CÓDIGO</td>
+			<td>NOME</td>
+			<td colspan="2">Ação</td>
 
-					</tr>
-
+		</tr>
 
 
-				<?php do{
+
+		<?php do {
 
 
-					?>
-					
-					<tr>
+			?>
 
-						<td><?php echo $dados_pousada['id_pousada'];?></td>
-						<td><?php echo $dados_pousada['nome'];?></td>
-						<td>
+			<tr>
 
-							<a href="editar.php?codigo_curso=<?php echo $dados_pousada['id_pousada'];?>">
-								<img src="../../img/banner-pen.png" class="botao_acao" title="Editar">
-							</a>
-						</td>
+				<td>
+					<?php echo $dados_pousada['id_pousada']; ?>
+				</td>
+				<td>
+					<?php echo $dados_pousada['nome']; ?>
+				</td>
+				<td>
 
-						<td>
+					<a href="editar.php?codigo_curso=<?php echo $dados_pousada['id_pousada']; ?>">
+						<img src="../../img/editar.png" class="botao_acao" title="Editar">
+					</a>
+				</td>
 
-							<a href="javascript:func()" onclick="confirmar_exclusao('<?php echo $dados_pousada['id_pousada'];?>')">
-								<img src="../../img/lixeira.png" class="botao_acao" title="Excluir">
-							</a>
-						</td>
-						
-					</tr>
+				<td>
 
-				<?php }while ($dados_pousada = mysqli_fetch_assoc($select_pousada));?>
+					<a href="javascript:func()" onclick="confirmar_exclusao('<?php echo $dados_pousada['id_pousada']; ?>')">
+						<img src="../../img/lixeira.png" class="botao_acao" title="Excluir">
+					</a>
+				</td>
 
-				</table>
+			</tr>
 
-		</div>
+		<?php } while ($dados_pousada = mysqli_fetch_assoc($select_pousada)); ?>
+
+	</table>
+
+</div>
 
 </body>
 
