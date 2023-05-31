@@ -31,7 +31,8 @@ if (!isset($_SESSION['nome_login'])) {
 	<!--CABEÇALHO DA PAGINA INICIAL-->
 	<header>
 		<div class="imagem_logo">
-			<div><img src="http://localhost//portalValdomiro/img/logo.png"></div>
+			<div><img src="<?php echo $_SESSION['url'] . "/img/logo.png"; ?>">
+			</div>
 		</div>
 		<nav>
 			<ul class="menu">
@@ -46,7 +47,6 @@ if (!isset($_SESSION['nome_login'])) {
 					</ul>
 
 				</li>
-				<li><a href="<?php echo $_SESSION['url_cliente'] . "/pousadas/pousadas.php"; ?>">Pousadas</a></li>
 				<li><a href="<?php echo $_SESSION['url_cliente'] . "/deliverys/deliverys.php"; ?>">Deliverys </a></li>
 				<li><a href="<?php echo $_SESSION['url'] . "/sair.php"; ?>">Sair</a></li>
 			</ul>

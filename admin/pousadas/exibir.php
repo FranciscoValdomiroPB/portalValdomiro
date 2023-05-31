@@ -6,7 +6,7 @@
 	$select_pousada = mysqli_query($conexao, "SELECT * FROM pousada ORDER BY id_pousada ASC");
 				
 	
-		if (mysqli_num_rows($select_curso) > 0) {
+		if (mysqli_num_rows($select_pousada) > 0) {
 			
 			$dados_pousada = mysqli_fetch_assoc($select_pousada);
 			
@@ -47,25 +47,25 @@
 					
 					<tr>
 
-						<td><?php echo $dados_curso['id_pousada'];?></td>
-						<td><?php echo $dados_curso['nome'];?></td>
+						<td><?php echo $dados_pousada['id_pousada'];?></td>
+						<td><?php echo $dados_pousada['nome'];?></td>
 						<td>
 
-							<a href="editar.php?codigo_curso=<?php echo $dados_curso['id_pousada'];?>">
-								<img src="../../img/editar.png" class="botao_acao" title="Editar">
+							<a href="editar.php?codigo_curso=<?php echo $dados_pousada['id_pousada'];?>">
+								<img src="../../img/banner-pen.png" class="botao_acao" title="Editar">
 							</a>
 						</td>
 
 						<td>
 
-							<a href="javascript:func()" onclick="confirmar_exclusao('<?php echo $dados_curso['codigo_curso'];?>')">
-								<img src="../../img/excluir.png" class="botao_acao" title="Excluir">
+							<a href="javascript:func()" onclick="confirmar_exclusao('<?php echo $dados_pousada['id_pousada'];?>')">
+								<img src="../../img/lixeira.png" class="botao_acao" title="Excluir">
 							</a>
 						</td>
 						
 					</tr>
 
-				<?php }while ($dados_curso = mysqli_fetch_assoc($select_curso));?>
+				<?php }while ($dados_pousada = mysqli_fetch_assoc($select_pousada));?>
 
 				</table>
 

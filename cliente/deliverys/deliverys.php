@@ -6,7 +6,8 @@ require('../../conexao.php'); ?>
 <!--CONTEÚDO DA PÁGINA DELIVERY---->
 <main>
 	<section>
-		<div class="pousadas">
+	<h2>NOSSOS RESTAURANTES</h2>
+		<div class="pousada">
 			<?php
 
 			// Consulta para obter as informações das pousadas

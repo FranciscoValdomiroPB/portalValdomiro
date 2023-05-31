@@ -2,54 +2,54 @@
 
 	
 	//VERIFICANDO DADOS PARA ATUALIZAR
-	if (isset($_POST['codigo_curso'])) {
+	if (isset($_POST['id_pousada'])) {
 
-		$codigo_curso = $_POST['codigo_curso'];      
+		$id_pousada = $_POST['id_pousada'];      
 	
-		$nome_curso = $_POST['nome_curso'];
+		$nome = $_POST['nome'];
 
 
-		$update_curso = "UPDATE curso SET nome_curso = '".$nome_curso."' WHERE codigo_curso = $codigo_curso";
+		$update_pousada = "UPDATE pousada SET nome = '".$nome."' WHERE id_pousada = $id_pousada";
 	
 	
-		if (mysqli_query($conexao,$update_curso)) {
+		if (mysqli_query($conexao,$update_pousada)) {
 
 				mysqli_close($conexao);
 
-				echo "<script> alert ('CURSO ATUALIZADO COM SUCESSO!');</script>";
+				echo "<script> alert ('POUSADA ATUALIZADO COM SUCESSO!');</script>";
 
-				echo "<script> window.location.href='$url_admin/curso/exibir.php';</script>";
+				echo "<script> window.location.href='$url_admin/pousadas/exibir.php';</script>";
 				
 			} else {
 			
 				echo "<script> alert ('ERRO: NÃO FOI POSSÍVEL ATUALIZAR.');</script>";
 
-				echo "<script> window.location.href='$url_admin/curso';</script>";
+				echo "<script> window.location.href='$url_admin/pousadas';</script>";
 				
 				mysqli_close($conexao);
 			}
 
-	}else if (isset($_POST['nome_curso'])) {      
+	}else if (isset($_POST['nome'])) {      
 	
-		$nome_curso = $_POST['nome_curso'];
+		$nome = $_POST['nome'];
 
 
-		$insert_curso = "INSERT INTO curso (nome_curso) VALUES ('".$nome_curso."')";
+		$insert_pousada = "INSERT INTO pousada (nome) VALUES ('".$nome."')";
 	
 	
-		if (mysqli_query($conexao,$insert_curso)) {
+		if (mysqli_query($conexao,$insert_pousada)) {
 
 				mysqli_close($conexao);
 
-				echo "<script> alert ('CURSO CADASTRADO COM SUCESSO!');</script>";
+				echo "<script> alert ('POUSADA CADASTRADO COM SUCESSO!');</script>";
 
-				echo "<script> window.location.href='$url_admin/curso/exibir.php';</script>";
+				echo "<script> window.location.href='$url_admin/pousadas/exibir.php';</script>";
 				
 			} else {
 			
 				echo "<script> alert ('ERRO: NÃO FOI POSSÍVEL CADASTRAR.');</script>";
 
-				echo "<script> window.location.href='$url_admin/curso';</script>";
+				echo "<script> window.location.href='$url_admin/pousadas';</script>";
 				
 				mysqli_close($conexao);
 			}

@@ -3,24 +3,24 @@
 	require('../../conexao.php');
 
 
-	$codigo_curso = $_GET['codigo_curso'];
+	$id_pousada = $_GET['id_pousada'];
 
-	$delete_curso = "DELETE FROM curso WHERE codigo_curso = $codigo_curso";
+	$delete_pousada = "DELETE FROM `pousada` WHERE id_pousada = $id_pousada";
 	
 	
-		if (mysqli_query($conexao,$delete_curso)) {
+		if (mysqli_query($conexao,$delete_pousada)) {
 
 				mysqli_close($conexao);
 
-				echo "<script> alert ('CURSO EXCLUÍDO COM SUCESSO!');</script>";
+				echo "<script> alert ('POUSADA EXCLUÍDO COM SUCESSO!');</script>";
 
-				echo "<script> window.location.href='$url_admin/curso/exibir.php';</script>";
+				echo "<script> window.location.href='$url_admin/pousadas/exibir.php';</script>";
 				
 			} else {
 			
 				echo "<script> alert ('ERRO: NÃO FOI POSSÍVEL EXCLUIR.');</script>";
 
-				echo "<script> window.location.href='$url_admin/curso';</script>";
+				echo "<script> window.location.href='$url_admin/pousadas';</script>";
 				
 				mysqli_close($conexao);
 			}

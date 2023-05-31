@@ -44,17 +44,17 @@ if ($_SESSION['tipo_login'] <> 0) {
 	<title>Gruta</title>
 
 	<!-- ARQUIVO DE ESTILOS DO PORTAL -->
-	<link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['url'] . "/css/estilo.css"; ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['url'] . "/css/estiloCliente.css"; ?>">
 
 	<script>
 
-		function confirmar_exclusao(codigo_curso) {
+		function confirmar_exclusao(id_pousada) {
 
 			var resposta = confirm("Deseja continuar com a exclusão?");
 
 			if (resposta == true) {
 
-				window.location.href = "excluir.php?codigo_curso=" + codigo_curso;
+				window.location.href = "excluir.php?id_pousada=" + id_pousada;
 			}
 		}
 	</script>
@@ -64,43 +64,48 @@ if ($_SESSION['tipo_login'] <> 0) {
 
 <body>
 
-	<div class="barra_topo">
-
-		<div class="barra_topo_n1">
-
-			<img src="<?php echo $_SESSION['url'] . "/img/logo.png"; ?>">
-
-			<label>
-				<?php echo "Seja bem-vindo, " . $_SESSION['nome_completo_login']; ?>
-			</label>
-
+	<header>
+		<div class="imagem_logo">
+			<div><img src="<?php echo $_SESSION['url'] . "/img/logo.png"; ?>"></div>
 		</div>
+		<nav>
 
-		<div class="barra_topo_n2">
+			<ul class="menu">
 
-			<nav>
 
-				<ul class="menu_admin">
-
-					<li><a href="#">PERFIL</a>
-
-						<ul>
-							<li><a href="<?php echo $_SESSION['url_admin'] . "/perfil"; ?>">Cadastrar</a></li>
-							<li><a href="<?php echo $_SESSION['url_admin'] . "/perfil/exibir.php"; ?>">Exibir</a></li>
-						</ul>
-
-					</li>
-
-					<li><a href="<?php echo $_SESSION['url'] . "/sair.php"; ?>">SAIR</a></li>
-					<li><a href="http://localhost//portalValdomiro/">Início</a></li>
-					<li><a href="http://localhost//portalValdomiro/admin/perfil/perfil.php">Perfil</a></li>
-					<li><a href="http://localhost//portalValdomiro/admin/pousadas/pousadas.php">Pousadas</a></li>
-					<li><a href="http://localhost//portalValdomiro\admin\deliverys\deliverys.php">Deliverys </a></li>
-					<li><a href="<?php echo $_SESSION['url'] . "/sair.php"; ?>">Sair</a></li>
-				</ul>
+				<li><a href="<?php echo $_SESSION['url_admin']; ?>">Início</a>
 				
-			</nav>
+				<li><a href="#">Perfil</a>
+					<ul>
+						<li><a href="<?php echo $_SESSION['url_admin'] . "/perfil"; ?>">Cadastrar</a></li>
+						<li><a href="<?php echo $_SESSION['url_admin'] . "/perfil/exibir.php"; ?>">Exibir</a></li>
+					</ul>
 
-		</div>
+				</li>
+				
+				<li><a href="#">Pousadas</a>
+					<ul>
+						<li><a href="<?php echo $_SESSION['url_admin'] . "/pousadas"; ?>">Cadastrar</a></li>
+						<li><a href="<?php echo $_SESSION['url_admin'] . "/pousadas/exibir.php"; ?>">Exibir</a></li>
+					</ul>
 
-	</div>
+				</li>
+
+				<li><a href="#">Deliverys</a>
+					<ul>
+						<li><a href="<?php echo $_SESSION['url_admin'] . "/deliverys"; ?>">Cadastrar</a></li>
+						<li><a href="<?php echo $_SESSION['url_admin'] . "/deliverys/deliverys.php"; ?>">Exibir</a></li>
+					</ul>
+				</li>
+
+				<li><a href="<?php echo $_SESSION['url'] . "/sair.php"; ?>">Sair</a></li>
+			</ul>
+
+		</nav>
+		<label>
+			<?php echo "Seja bem-vindo, " . $_SESSION['nome_completo_login']; ?>
+			<h1>Presidente Figueiredo-AM</h1>
+		</label>
+
+	</header>
+</body>
