@@ -1,10 +1,10 @@
 <?php session_start();
 
-if (!isset($_SESSION['nome_login'])) {
+if (!isset($_SESSION['nome'])) {
 
 	session_destroy();
 
-	unset($_SESSION['nome_login']);
+	unset($_SESSION['nome']);
 	unset($_SESSION['tipo_login']);
 
 	echo "<script> alert ('ERRO: É NECESSÁRIO FAZER LOGIN');</script>";
@@ -19,7 +19,7 @@ if ($_SESSION['tipo_login'] <> 0) {
 	session_destroy();
 
 	unset($_SESSION['nome_completo_login']);
-	unset($_SESSION['nome_login']);
+	unset($_SESSION['nome']);
 	unset($_SESSION['tipo_login']);
 
 	unset($_SESSION['url']);
@@ -75,13 +75,13 @@ if ($_SESSION['tipo_login'] <> 0) {
 
 				<li><a href="<?php echo $_SESSION['url_admin']; ?>">Início</a>
 				
-				<li><a href="#">Perfil</a>
+				<!--<li><a href="#">Perfil</a>
 					<ul>
-						<li><a href="<?php echo $_SESSION['url_admin'] . "/perfil"; ?>">Cadastrar</a></li>
-						<li><a href="<?php echo $_SESSION['url_admin'] . "/perfil/exibir.php"; ?>">Exibir</a></li>
+						<li><a href="<?php echo $_SESSION['url_admin'] . "/usuario"; ?>">Cadastrar</a></li>
+						<li><a href="<?php echo $_SESSION['url_admin'] . "/usuario/exibir.php"; ?>">Exibir</a></li>
 					</ul>
 
-				</li>
+				</li>-->
 				
 				<li><a href="#">Pousadas</a>
 					<ul>
@@ -91,10 +91,10 @@ if ($_SESSION['tipo_login'] <> 0) {
 
 				</li>
 
-				<li><a href="#">Deliverys</a>
+				<li><a href="#">Restaurantes</a>
 					<ul>
-						<li><a href="<?php echo $_SESSION['url_admin'] . "/deliverys"; ?>">Cadastrar</a></li>
-						<li><a href="<?php echo $_SESSION['url_admin'] . "/deliverys/deliverys.php"; ?>">Exibir</a></li>
+						<li><a href="<?php echo $_SESSION['url_admin'] . "/restaurantes"; ?>">Cadastrar</a></li>
+						<li><a href="<?php echo $_SESSION['url_admin'] . "/restaurantes/exibir.php"; ?>">Exibir</a></li>
 					</ul>
 				</li>
 

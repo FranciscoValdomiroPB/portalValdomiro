@@ -26,7 +26,7 @@ if (mysqli_num_rows($select_pousada) > 0) {
 
 <div class="estila_tabela">
 
-	<h1>POUSADAS CADASTRADOS</h1>
+	<h1>POUSADAS CADASTRADAS</h1>
 	<table>
 
 		<tr class="tabela_cabecalho">
@@ -54,7 +54,7 @@ if (mysqli_num_rows($select_pousada) > 0) {
 				</td>
 				<td>
 
-					<a href="editar.php?codigo_curso=<?php echo $dados_pousada['id_pousada']; ?>">
+					<a href="editar.php?id_pousada=<?php echo $dados_pousada['id_pousada']; ?>">
 						<img src="../../img/editar.png" class="botao_acao" title="Editar">
 					</a>
 				</td>

@@ -1,76 +1,41 @@
-<?php require('../topo_cliente.php');
+<?php
+require('../topo_cliente.php');
+require('../../conexao.php');
 
-	require('../../conexao.php');
+$select_usuario = mysqli_query($conexao, "SELECT nome_completo_login, email, fotos, contato FROM usuario ORDER BY id_usuario ASC");
 
-
-	$select_pousada = mysqli_query($conexao, "SELECT * FROM pousada ORDER BY id_pousada ASC");
-				
-	
-		if (mysqli_num_rows($select_pousada) > 0) {
-			
-			$dados_pousada = mysqli_fetch_assoc($select_pousada);
-			
-		} else {
-			
-			echo "<script> alert ('NÃO EXISTEM POUSADAS CADASTRADOS!');</script>";
-				
-			echo "<script> window.location.href='$url_admin/pousadas';</script>";
-			
-			
-		}
-
-
-?>
-
-
-
-		<div class="estila_tabela">
-
-			<div><h1>POUSADAS CADASTRADOS</h1></div>
-
-				<table>
-					
-					<tr class="tabela_cabecalho">
-
-						<td>CÓDIGO</td>
-						<td>NOME</td>
-						<td colspan="2">Ação</td>
-
-					</tr>
-
-
-
-				<?php do{
-
-
-					?>
-					
-					<tr>
-
-						<td><?php echo $dados_curso['codigo_curso'];?></td>
-						<td><?php echo $dados_curso['nome_curso'];?></td>
-						<td>
-
-							<a href="editar.php?codigo_curso=<?php echo $dados_curso['codigo_curso'];?>">
-								<img src="../../img/editar.png" class="botao_acao" title="Editar">
-							</a>
-						</td>
-
-						<td>
-
-							<a href="javascript:func()" onclick="confirmar_exclusao('<?php echo $dados_curso['codigo_curso'];?>')">
-								<img src="../../img/excluir.png" class="botao_acao" title="Excluir">
-							</a>
-						</td>
-						
-					</tr>
-
-				<?php }while ($dados_curso = mysqli_fetch_assoc($select_curso));?>
-
-				</table>
-
+if (mysqli_num_rows($select_usuario) > 0) {
+	$dados_usuario = mysqli_fetch_assoc($select_usuario);
+	?>
+	<div class="estil_exibir_perfil">
+		<h1>MEU PERFIL</h1>
+		<div>
+			<label>Nome Completo: </label>
+			<span>
+				<?php echo $dados_usuario['nome_completo_login']; ?>
+			</span>
 		</div>
-
-</body>
-
-</html>
+		<div>
+			<label>Email: </label>
+			<span>
+				<?php echo $dados_usuario['email']; ?>
+			</span>
+		</div>
+		<div>
+			<label>Foto: </label>
+			<img src="data:image/jpeg;base64,<?php echo base64_encode($dados_usuario['fotos']); ?>" alt="Foto do usuário">
+		</div>
+		<div>
+			<label>Contato: </label>
+			<span>
+				<?php echo $dados_usuario['contato']; ?>
+			</span>
+		</div>
+	
+	</div>
+	<?php
+} else {
+	echo "<script> alert ('NÃO EXISTEM USUÁRIOS CADASTRADOS!');</script>";
+	echo "<script> window.location.href='$url_admin/pousadas';</script>";
+}
+?>

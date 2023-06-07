@@ -106,9 +106,9 @@ section {
 h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    text-align: center;
-    color: blue;
+    color: #F5A623;
     font-style: Arial;
+    text-align: center
 }
 
 .pousadas {
@@ -124,35 +124,68 @@ h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     overflow: hidden;
+    text-align: justify;
 }
 
 .pousada img {
-    max-width: 400px;
-    max-height: 300px;
+    width: 400px;
+    height: 300px;
     object-fit: cover;
+}
+
+.pousadas_endereco p {
+    text-align: center;
 }
 
 h3 {
-    text-align: center;
     font-size: 20px;
     margin-top: 20px;
     margin-bottom: 10px;
-    color: blue;
+    color: #F5A623;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .estila_tabela {
+    width: 1000px;
+    margin: 4rem auto;
+}
+
+.estila_tabela h1 {
+    font-size: 2rem;
+    color: blue;
     text-align: center;
-    margin: 0 auto;
+}
+
+table {
+    width: 100%;
 }
 
 .tabela_cabecalho {
+    font-weight: 600;
+    height: 5rem;
+}
+
+td {
+    font-size: 1.4rem;
+    border-bottom: 1px solid #069;
     text-align: center;
 }
 
+.agrupamento_curso {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    border: 1px solid #069;
+    padding: 5rem;
+    border-radius: 8px;
+}
+
 .botao_acao {
-    max-width: 200px;
-    max-height: 100px;
-    object-fit: cover;
+    width: 35px;
+    cursor: pointer;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
 }
 
 .pousada a {
@@ -166,10 +199,9 @@ p {
     padding: 20px;
     font-size: 16px;
     line-height: 1.5;
+    text-align: center;
 }
-table{
-    margin: 0 auto;
-}
+
 /* Estilos para o rodapé */
 footer {
     background-color: #f2f2f2;
@@ -177,4 +209,155 @@ footer {
     text-align: center;
     font-size: 14px;
     margin-top: 50px;
+}
+
+/* Estilos para o formulário de atualização da pousada */
+.form_login_pousada {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form_login_pousada h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #F5A623;
+    text-align: center;
+}
+
+.agrupamento_editar_pousada {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.agrupamento_editar_pousada div {
+    display: flex;
+    flex-direction: column;
+}
+
+.agrupamento_editar_pousada label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.agrupamento_editar_pousada input[type="text"],
+.agrupamento_editar_pousada input[type="number"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.agrupamento_editar_pousada input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #005A8A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.agrupamento_editar_pousada input[type="submit"]:hover {
+    background-color: #F5A623;
+}
+
+.imagem_logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.form_login_restaurante {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form_login_restaurante h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #F5A623;
+    text-align: center;
+}
+
+.agrupamento_editar_restaurante {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.agrupamento_editar_restaurante div {
+    display: flex;
+    flex-direction: column;
+}
+
+.agrupamento_editar_restaurante label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.agrupamento_editar_restaurante input[type="text"],
+.agrupamento_editar_restaurante input[type="number"],
+.agrupamento_editar_restaurante input[type="tel"],
+.agrupamento_editar_restaurante input[type="url"],
+.agrupamento_editar_restaurante textarea {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.agrupamento_editar_restaurante input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #005A8A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.agrupamento_editar_restaurante input[type="submit"]:hover {
+    background-color: #F5A623;
+}
+
+/* Estilo personalizado para a página de exibir perfil */
+.estil_exibir_perfil {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.estil_exibir_perfil h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #F5A623;
+    text-align: center;
+}
+
+.estil_exibir_perfil div {
+    margin-bottom: 10px;
+}
+
+.estil_exibir_perfil label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.estil_exibir_perfil span {
+    font-size: 16px;
+}
+
+.estil_exibir_perfil img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
 }

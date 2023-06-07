@@ -1,10 +1,10 @@
 <?php session_start();
 
-if (!isset($_SESSION['nome_login'])) {
+if (!isset($_SESSION['nome'])) {
 
 	session_destroy();
 
-	unset($_SESSION['nome_login']);
+	unset($_SESSION['nome']);
 	unset($_SESSION['tipo_login']);
 
 	echo "<script> alert ('ERRO: É NECESSÁRIO FAZER LOGIN');</script>";
@@ -27,6 +27,10 @@ if (!isset($_SESSION['nome_login'])) {
 
 </head>
 
+<!-- ARQUIVO DE ESTILOS DO PORTAL -->
+<link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['url'] . "/css/estiloCliente.css"; ?>">
+
+
 <body>
 	<!--CABEÇALHO DA PAGINA INICIAL-->
 	<header>
@@ -37,15 +41,15 @@ if (!isset($_SESSION['nome_login'])) {
 		<nav>
 			<ul class="menu">
 				<li><a href="<?php echo $_SESSION['url_cliente']; ?>">Início</a></li>
-				<li><a href="#">Perfil</a>
+				<li><a href="<?php echo $_SESSION['url_cliente'] . "/perfil/exibir.php"; ?>">Perfil</a>
 
-					<ul>
+					<!--<ul>
 						<li><a href="<?php echo $_SESSION['url_cliente'] . "/perfil/editar.php"; ?>">Editar</a></li>
 						<li><a href="<?php echo $_SESSION['url_cliente'] . "/perfil/exibir.php"; ?>">Exibir</a></li>
-					</ul>
+					</ul>-->
 
 				</li>
-				<li><a href="<?php echo $_SESSION['url_cliente'] . "/deliverys/deliverys.php"; ?>">Deliverys </a></li>
+				<li><a href="<?php echo $_SESSION['url_cliente'] . "/restaurantes/exibir.php"; ?>">Restaurantes </a></li>
 				<li><a href="<?php echo $_SESSION['url'] . "/sair.php"; ?>">Sair</a></li>
 			</ul>
 		</nav>
