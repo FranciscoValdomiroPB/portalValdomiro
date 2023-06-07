@@ -20,4 +20,4 @@ RUN docker-php-ext-install zip
 
 RUN docker-php-ext-install gd
 
-RUN chmod 777 -R /var/www/html/
+# RUN chmod 777 -R /var/www/html/
