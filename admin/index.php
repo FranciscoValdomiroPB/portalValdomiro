@@ -51,8 +51,8 @@ require('../conexao.php');
                     echo '<img src="data:image/jpeg;base64,' . base64_encode($row['fotos']) . '" alt="' . $row['nome'] . '">';
                     echo '<h3>' . $row['nome'] . '</h3>';
                     echo '<p>' . $row['descricao'] . '</p>';
-					echo '<p><a href="' . $row['endereço_link'] . '">Contato: ' . $row['contato'] .'</a></p>';
-					echo '<p><a href="' . $row['endereço_link'] . '">Endereço: ' . $row['endereco'] .'</a></p>';
+					echo '<p><a href="' . $row['endereco_link'] . '">Contato: ' . $row['contato'] .'</a></p>';
+					echo '<p><a href="' . $row['endereco_link'] . '">Endereço: ' . $row['endereco'] .'</a></p>';
 					echo '</div>';
 				
                 }
