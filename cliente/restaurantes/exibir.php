@@ -1,7 +1,7 @@
 <?php require('../topo_cliente.php');
 require('../../conexao.php'); ?>
 <!-- ARQUIVO DE ESTILO DO PORTAL -->
-<link rel="stylesheet" type="text/css" href="http://localhost//portalValdomiro/css/estiloCliente.css">
+<link rel="stylesheet" type="text/css" href="../../css/estiloCliente.css">
 
 <!--CONTEÚDO DA PÁGINA RESTAURANTE---->
 <main>

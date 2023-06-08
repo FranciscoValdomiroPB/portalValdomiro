@@ -2,7 +2,7 @@
 require('../conexao.php');?>
 
 <!-- ARQUIVO DE ESTILO DO PORTAL -->
-<link rel="stylesheet" type="text/css" href="http://localhost//portalValdomiro/css/estiloCliente.css">
+<link rel="stylesheet" type="text/css" href="../css/estiloCliente.css">
 
 <!--CONTEÚDO DA PÁGINA INICIAL---->
 <main>
@@ -15,7 +15,7 @@ require('../conexao.php');?>
         <div class="pousadas">
             <?php
             // Consulta para obter as informações das pousadas
-            $result_pousada = mysqli_query($conexao, "SELECT * FROM Pousada");
+            $result_pousada = mysqli_query($conexao, "SELECT * FROM pousada");
 
             // Verifica se há registros
             if (mysqli_num_rows($result_pousada) > 0) {
@@ -49,8 +49,8 @@ require('../conexao.php');?>
                     echo '<img src="data:image/jpeg;base64,' . base64_encode($row['fotos']) . '" alt="' . $row['nome'] . '">';
                     echo '<h3>' . $row['nome'] . '</h3>';
                     echo '<p>' . $row['descricao'] . '</p>';
-					echo '<p><a href="' . $row['endereço_link'] . '">Contato: ' . $row['contato'] .'</a></p>';
-					echo '<p><a href="' . $row['endereço_link'] . '">Endereço: ' . $row['endereco'] .'</a></p>';
+					echo '<p><a href="' . $row['endereco_link'] . '">Contato: ' . $row['contato'] .'</a></p>';
+					echo '<p><a href="' . $row['endereco_link'] . '">Endereço: ' . $row['endereco'] .'</a></p>';
 					echo '</div>';
 				
                 }
