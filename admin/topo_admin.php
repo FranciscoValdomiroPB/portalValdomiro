@@ -44,7 +44,7 @@ if ($_SESSION['tipo_login'] <> 0) {
 	<title>Gruta</title>
 
 	<!-- ARQUIVO DE ESTILOS DO PORTAL -->
-	<link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['url'] . "/css/estiloCliente.css"; ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['url'] . "css/estiloCliente.css"; ?>">
 
 	<script>
 
