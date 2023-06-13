@@ -1,15 +1,16 @@
 <?php require('topo_cliente.php'); 
 require('../conexao.php');?>
 
-<!-- ARQUIVO DE ESTILO DO PORTAL -->
-<link rel="stylesheet" type="text/css" href="../css/estiloCliente.css">
+<!-- ARQUIVO DE ESTILO DO PORTAL-->
+<!-- <link rel="stylesheet" type="text/css" href="../css/estiloCliente.css">  -->
 
 <!--CONTEÚDO DA PÁGINA INICIAL---->
 <main>
-    <section>
+
+<section>
         <h2>BEM-VINDO À NOSSA REDE DE POUSADAS</h2>
         <p>Nós oferecemos hospedagem de qualidade em Presidente Figueiredo-AM, com conforto e segurança para você e sua família. Todas as nossas pousadas são cuidadosamente selecionadas para garantir a sua satisfação.</p>
-    </section>
+</section>
     <section>
         <h2>NOSSAS POUSADAS</h2>
         <div class="pousadas">
@@ -48,7 +49,7 @@ require('../conexao.php');?>
                     echo '<div class="pousada">';
                     echo '<img src="data:image/jpeg;base64,' . base64_encode($row['fotos']) . '" alt="' . $row['nome'] . '">';
                     echo '<h3>' . $row['nome'] . '</h3>';
-                    echo '<p>' . $row['descricao'] . '</p>';
+                    echo utf8_encode('<p>' . $row['descricao'] . '</p>');
 					echo '<p><a href="' . $row['endereco_link'] . '">Contato: ' . $row['contato'] .'</a></p>';
 					echo '<p><a href="' . $row['endereco_link'] . '">Endereço: ' . $row['endereco'] .'</a></p>';
 					echo '</div>';
@@ -57,7 +58,7 @@ require('../conexao.php');?>
             } else {
                 echo '<p>Não existem restaurantes cadastrados.</p>';
             }
-
+            
             // Fecha a conexão com o banco de dados
             mysqli_close($conexao);
             ?>
@@ -65,7 +66,7 @@ require('../conexao.php');?>
     </section>
     
 </main>
-<footer>
+    <footer>
     <p>GRUTA © 2023</p>
 </footer>
 </body>

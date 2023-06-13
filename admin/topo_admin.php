@@ -1,5 +1,7 @@
 <?php session_start();
 
+
+
 if (!isset($_SESSION['nome'])) {
 
 	session_destroy();
@@ -9,8 +11,7 @@ if (!isset($_SESSION['nome'])) {
 
 	echo "<script> alert ('ERRO: É NECESSÁRIO FAZER LOGIN');</script>";
 
-	echo "<script> window.location.href='http://localhost/portalValdomiro';</script>";
-
+	echo "<script> window.location.href='$url';</script>";
 }
 
 if ($_SESSION['tipo_login'] <> 0) {
@@ -26,8 +27,7 @@ if ($_SESSION['tipo_login'] <> 0) {
 	unset($_SESSION['url_admin']);
 	unset($_SESSION['url_cliente']);
 
-	echo "<script> window.location.href='http://localhost/portalValdomiro';</script>";
-
+	echo "<script> window.location.href='$url';</script>";
 }
 
 
@@ -74,15 +74,15 @@ if ($_SESSION['tipo_login'] <> 0) {
 
 
 				<li><a href="<?php echo $_SESSION['url_admin']; ?>">Início</a>
-				
-				<!--<li><a href="#">Perfil</a>
+
+					<!--<li><a href="#">Perfil</a>
 					<ul>
 						<li><a href="<?php echo $_SESSION['url_admin'] . "/usuario"; ?>">Cadastrar</a></li>
 						<li><a href="<?php echo $_SESSION['url_admin'] . "/usuario/exibir.php"; ?>">Exibir</a></li>
 					</ul>
 
 				</li>-->
-				
+
 				<li><a href="#">Pousadas</a>
 					<ul>
 						<li><a href="<?php echo $_SESSION['url_admin'] . "/pousadas"; ?>">Cadastrar</a></li>

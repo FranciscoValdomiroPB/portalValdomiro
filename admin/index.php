@@ -4,7 +4,7 @@ require('../conexao.php');
 ?>
 
 <!-- ARQUIVO DE ESTILO DO PORTAL -->
-<link rel="stylesheet" type="text/css" href="http://localhost//portalValdomiro/css/estiloCliente.css">
+<link rel="stylesheet" type="text/css" href="../css/estiloCliente.css">
 
 <!--CONTEÚDO DA PÁGINA INICIAL---->
 <main>
@@ -17,7 +17,7 @@ require('../conexao.php');
         <div class="pousadas">
             <?php
             // Consulta para obter as informações das pousadas
-            $result_pousada = mysqli_query($conexao, "SELECT * FROM Pousada");
+            $result_pousada = mysqli_query($conexao, "SELECT * FROM pousada");
 
             // Verifica se há registros
             if (mysqli_num_rows($result_pousada) > 0) {

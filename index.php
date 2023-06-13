@@ -9,7 +9,7 @@
 	<title>Gruta</title>
 
 	<!-- ARQUIVO DE ESTILOS DO PORTAL -->
-	<link rel="stylesheet" type="text/css" href="http://localhost/portalValdomiro\css\estilologin.css">
+	<link rel="stylesheet" type="text/css" href="../css/estilologin.css">
 
 </head>
 

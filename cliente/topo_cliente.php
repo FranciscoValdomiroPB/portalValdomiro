@@ -1,5 +1,6 @@
 <?php session_start();
 
+
 if (!isset($_SESSION['nome'])) {
 
 	session_destroy();
@@ -9,47 +10,43 @@ if (!isset($_SESSION['nome'])) {
 
 	echo "<script> alert ('ERRO: É NECESSÁRIO FAZER LOGIN');</script>";
 
-	echo "<script> window.location.href='http://localhost/portalValdomiro';</script>";
-
+	echo "<script> window.location.href='$url';</script>";
 }
 ?>
 
 <!DOCTYPE html>
-
 <html lang="pt-br">
 
 <head>
-
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Gruta</title>
-
+	<!-- ARQUIVO DE ESTILOS DO PORTAL -->
+	<link rel="stylesheet" type="text/css" href="../../css/estiloCliente.css">
 
 </head>
-
-<!-- ARQUIVO DE ESTILOS DO PORTAL -->
-<link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['url'] . "css/estiloCliente.css"; ?>">
-
 
 <body>
 	<!--CABEÇALHO DA PAGINA INICIAL-->
 	<header>
 		<div class="imagem_logo">
-			<div><img src="<?php echo $_SESSION['url'] . "img/logo.png"; ?>">
+			<div><img src="<?php echo $_SESSION['url'] . "/img/logo.png"; ?>">
 			</div>
 		</div>
 		<nav>
 			<ul class="menu">
 				<li><a href="<?php echo $_SESSION['url_cliente']; ?>">Início</a></li>
-				<li><a href="<?php echo $_SESSION['url_cliente'] . "perfil/exibir.php"; ?>">Perfil</a>
+				<li><a href="<?php echo $_SESSION['url_cliente'] . "/perfil/exibir.php"; ?>">Perfil</a>
 
 					<!--<ul>
-						<li><a href="<?php echo $_SESSION['url_cliente'] . "perfil/editar.php"; ?>">Editar</a></li>
-						<li><a href="<?php echo $_SESSION['url_cliente'] . "perfil/exibir.php"; ?>">Exibir</a></li>
+						<li><a href="<?php echo $_SESSION['url_cliente'] . "/perfil/editar.php"; ?>">Editar</a></li>
+						<li><a href="<?php echo $_SESSION['url_cliente'] . "/perfil/exibir.php"; ?>">Exibir</a></li>
 					</ul>-->
 
 				</li>
-				<li><a href="<?php echo $_SESSION['url_cliente'] . "restaurantes/exibir.php"; ?>">Restaurantes </a></li>
+				<li><a href="<?php echo $_SESSION['url_cliente'] . "/restaurantes/exibir.php"; ?>">Restaurantes </a>
+				</li>
 				<li><a href="<?php echo $_SESSION['url'] . "sair.php"; ?>">Sair</a></li>
 			</ul>
 		</nav>
@@ -59,4 +56,3 @@ if (!isset($_SESSION['nome'])) {
 		</label>
 
 	</header>
-</body>

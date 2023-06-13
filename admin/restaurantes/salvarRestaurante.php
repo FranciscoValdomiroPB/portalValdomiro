@@ -20,25 +20,17 @@ if (isset($_POST['id_restaurante'])) {
         $file_tmp = $_FILES['fotos']['tmp_name'];
 
         // Ler o conteúdo do novo arquivo de imagem
-        $fp = fopen($file_tmp, 'rb');
-        $conteudo = fread($fp, filesize($file_tmp));
-        fclose($fp);
+        $conteudo = file_get_contents($file_tmp);
 
         // Preparar o conteúdo para ser salvo no banco de dados
         $conteudo = mysqli_real_escape_string($conexao, $conteudo);
-    } else {
-        // Manter o valor atual da imagem no banco de dados
-        $select_imagem = mysqli_query($conexao, "SELECT fotos FROM restaurante WHERE id_restaurante = $id_restaurante");
-        $dados_imagem = mysqli_fetch_assoc($select_imagem);
-        $conteudo = $dados_imagem['fotos'];
-    }
 
-    // Atualizar os dados do restaurante no banco de dados, incluindo a imagem
-    $update_restaurante = "UPDATE `restaurante` SET `nome` = '$nome', `descricao` = '$descricao', `endereco` = '$endereco', `endereco_link` = '$endereco_link', `contato` = '$contato', `valor_maximo` = '$valor_maximo', `valor_minimo` = '$valor_minimo'";
-    if (!empty($conteudo)) {
-        $update_restaurante .= ", `fotos` = '$conteudo'";
+        // Atualizar os dados do restaurante no banco de dados, incluindo a imagem
+        $update_restaurante = "UPDATE `restaurante` SET `nome` = '$nome', `descricao` = '$descricao', `endereco` = '$endereco', `endereco_link` = '$endereco_link', `contato` = '$contato', `valor_maximo` = '$valor_maximo', `valor_minimo` = '$valor_minimo', `fotos` = '$conteudo' WHERE id_restaurante = $id_restaurante";
+    } else {
+        // Atualizar os dados do restaurante no banco de dados sem a imagem
+        $update_restaurante = "UPDATE `restaurante` SET `nome` = '$nome', `descricao` = '$descricao', `endereco` = '$endereco', `endereco_link` = '$endereco_link', `contato` = '$contato', `valor_maximo` = '$valor_maximo', `valor_minimo` = '$valor_minimo' WHERE id_restaurante = $id_restaurante";
     }
-    $update_restaurante .= " WHERE id_restaurante = $id_restaurante";
 
     if (mysqli_query($conexao, $update_restaurante)) {
         mysqli_close($conexao);
@@ -67,9 +59,7 @@ if (isset($_POST['id_restaurante'])) {
         $file_tmp = $_FILES['fotos']['tmp_name'];
 
         // Ler o conteúdo do arquivo de imagem
-        $fp = fopen($file_tmp, 'rb');
-        $conteudo = fread($fp, filesize($file_tmp));
-        fclose($fp);
+        $conteudo = file_get_contents($file_tmp);
 
         // Preparar o conteúdo para ser salvo no banco de dados
         $conteudo = mysqli_real_escape_string($conexao, $conteudo);
