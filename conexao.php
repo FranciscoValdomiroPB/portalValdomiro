@@ -1,10 +1,10 @@
 <?php
 // session_start();
 
-$servidor = "localhost";
-$usuario = "root";
-$senha = "";
-$db_name = "db_pousadas";
+$servidor = "us-cdbr-east-06.cleardb.net";
+$usuario = "be22deab4b745a";
+$senha = "8bbd61db";
+$db_name = "heroku_122968a6d6a2529";
 
 
 $conexao = mysqli_connect($servidor, $usuario, $senha, $db_name) or die('Banco de dados indisponível.');
