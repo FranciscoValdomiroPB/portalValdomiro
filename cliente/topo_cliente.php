@@ -10,7 +10,7 @@ if (!isset($_SESSION['nome'])) {
 
 	echo "<script> alert ('ERRO: É NECESSÁRIO FAZER LOGIN');</script>";
 
-	echo "<script> window.location.href='$url';</script>";
+	echo "<script> window.location.href='../index.php';</script>";
 }
 ?>
 
@@ -23,7 +23,7 @@ if (!isset($_SESSION['nome'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Gruta</title>
 	<!-- ARQUIVO DE ESTILOS DO PORTAL -->
-	<link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['url'] . "css/estiloCliente.css"; ?>">
+	<link rel="stylesheet" type="text/css" href="https://projweb.onrender.com/css/estiloCliente.css"; ?>">
 
 </head>
 
@@ -47,7 +47,7 @@ if (!isset($_SESSION['nome'])) {
 				</li>
 				<li><a href="<?php echo $_SESSION['url_cliente'] . "/restaurantes/exibir.php"; ?>">Restaurantes </a>
 				</li>
-				<li><a href="<?php echo $_SESSION['url'] . "sair.php"; ?>">Sair</a></li>
+				<li><a href="https://projweb.onrender.com/sair.php">Sair</a></li>
 			</ul>
 		</nav>
 		<label>

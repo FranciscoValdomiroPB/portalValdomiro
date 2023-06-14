@@ -1,9 +1,9 @@
 ﻿<?php
 session_start();
-require_once "conexao.php"; // Inclui o arquivo conexao.php
+require_once "conexao.php"; 
 
 session_destroy();
 
-header("Location: $url");
+echo "<script>window.location.href = '$url';</script>";
 exit;
 ?>
