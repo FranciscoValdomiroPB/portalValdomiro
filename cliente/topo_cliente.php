@@ -23,7 +23,7 @@ if (!isset($_SESSION['nome'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Gruta</title>
 	<!-- ARQUIVO DE ESTILOS DO PORTAL -->
-	<link rel="stylesheet" type="text/css" href="../../css/estiloCliente.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['url'] . "css/estiloCliente.css"; ?>">
 
 </head>
 
