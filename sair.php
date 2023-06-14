@@ -1,8 +1,8 @@
 ﻿<?php
 session_start();
-session_destroy();
-
 require_once "conexao.php"; // Inclui o arquivo conexao.php
+
+session_destroy();
 
 header("Location: $url");
 exit;
